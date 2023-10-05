@@ -1,6 +1,6 @@
-const api_url = "https://retoolapi.dev/eIJFdo/data";
+const api_url = "https://retoolapi.dev/9tJEF3/data";
 
-initialise_data();
+//initialise_data();
 
 
 async function initialise_data() {
@@ -12,9 +12,9 @@ async function initialise_data() {
   // Storing data in form of JSON
   var data = await response.json();
 
-  var has_dummy_data = data.some(function(item){ return item.id == 1});
+  var has_dummy_data = data.some(function(item) { return item.id == 1 });
 
-  if(has_dummy_data) {
+  if (has_dummy_data) {
     for (var item of data_setup) {
       console.log(item)
       await fetch(api_url, {
@@ -24,11 +24,21 @@ async function initialise_data() {
           "Content-type": "application/json; charset=UTF-8"
         }
       })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+        .then((response) => response.json())
+        .then((json) => console.log(json));
     }
 
     // Remove the dummy data
     remove(1)
   }
+
+}
+
+function remove(item_id) {
+  return fetch(api_url + "/" + item_id, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
 }

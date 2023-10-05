@@ -8,6 +8,16 @@
   <title>Study Schedule Login</title>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
+  <script>
+    // If user is already logged in, redirect to homepage
+    if (sessionStorage.getItem('userStatus') == 'loggedIn') {
+      console.log('Redirecting...');
+      window.location.href = 'index.html';
+      $("")
+    } else {
+      console.log('Not redirecting...');
+    }
+  </script>
 </head>
 
 <body>

@@ -107,8 +107,8 @@
 
 .homepage .studystream-png {
   position: absolute;
-  width: 171px;
-  height: 105px;
+  width: 156px;
+  height: 118px;
   top: -9px;
   left: 0;
 }
@@ -401,10 +401,10 @@
 }
 
 .homepage .text-wrapper-17 {
-  position: absolute;
-  width: 146px;
+  position: relative;
+  width: 194px;
   height: 31px;
-  top: 178px;
+  top: 82px;
   left: 576px;
   font-family: "Open Sans-Bold", Helvetica;
   font-weight: 700;
