@@ -1,0 +1,68 @@
+/* Reset default browser styles */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.about-us,
+.why-choose-us,
+.meet-the-team {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.team-member {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+}
+
+.team-member img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}

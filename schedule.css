@@ -1,6 +1,9 @@
+/* Define CSS custom properties (variables) */
 :root {
   --mainColor: #14162b;
+  /* Main color for elements */
   --background: #1a1e36;
+  /* Background color */
 
   --fadedText: #36384d;
 
@@ -16,10 +19,12 @@
   --colorCyan: rgb(44, 232, 185);
 }
 
+/* Styles for the body element */
 body {
   background: linear-gradient(to right, #3afd8f, #2948ff);
 }
 
+/* Styles for a container element */
 .container {
   font-family: "Montserrat", sans-serif;
   position: fixed;
@@ -35,6 +40,7 @@ body {
   left: 50%;
 }
 
+/* Styles for the top header element */
 .topHeader {
   color: white;
   background: var(--mainColor);
@@ -46,6 +52,7 @@ body {
   box-shadow: 0px 10px 28px -11px rgba(0, 0, 0, 0.35);
 }
 
+/* Styles for the heading element */
 h1 {
   font-size: 30px;
   margin-top: 0px;
@@ -54,31 +61,38 @@ h1 {
   font-weight: 100;
 }
 
+/* Styles for top header and table header elements */
+
 .topHeader,
 th {
   font-size: 15px;
 }
 
+/* Styles for top header and table header elements */
 .tableHeader th {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 200;
 }
 
+/* Styles for tables */
 table {
   width: 100%;
   border-spacing: 0px;
 }
 
+/* Styles for table cells */
 td,
 th {
   width: 100px;
 }
 
+/* Styles for table data cells */
 td {
   height: 12px;
   border-left: 1px solid rgba(120, 120, 255, 0.5);
 }
 
+/* Styles for time elements */
 .time {
   color: rgba(255, 255, 255, 0.3);
   font-size: 10px;
@@ -86,10 +100,12 @@ td {
   font-weight: 100;
 }
 
+/* Styles for alternating table rows */
 tr:nth-child(2n) {
   background: rgba(120, 120, 255, 0.06);
 }
 
+/* Styles for a class named "myClass" */
 .myClass {
   background-color: var(--mainButtons);
   width: 100px;
@@ -102,41 +118,49 @@ tr:nth-child(2n) {
   border-radius: 3px;
 }
 
+/* Styles for paragraphs within "myClass" */
 .myClass p {
   margin: 6px 6px;
 }
 
+/* Styles for a font-awesome trash icon */
 .fa-trash-o {
   cursor: pointer;
   float: right;
   transition: 300ms;
 }
 
+/* Styles for the trash icon on hover */
 .fa-trash-o:hover {
   color: rgba(0, 0, 0, 0.5);
   transition: 300ms;
 }
 
+/* Styles for "myClass" when active */
 .myClass:active {
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   opacity: 0.7;
 }
 
+/* Styles for table rows */
 tr {
   height: 10px;
 }
 
+/* Styles for a class named "title" */
 .title {
   margin: 0px 0px;
   text-align: center;
 }
 
+/* Styles for buttons within top header */
 .topHeader button {
   float: right;
   margin-right: 15px;
 }
 
+/* Styles for generic buttons */
 button {
   background-color: var(--mainButtons);
   border: none;
@@ -149,21 +173,25 @@ button {
   transition: 300ms;
 }
 
+/* Styles for button focus state */
 button:focus {
   border: none;
   outline: none;
 }
 
+/* Styles for button hover state */
 button:hover {
   transform: translateY(-3px);
   transition: 300ms;
 }
 
+/* Styles for button when active */
 button:active {
   transform: translateY(4px);
   background: rgba(201, 48, 78, 1);
 }
 
+/* Styles for an element with class "addNew" */
 .addNew {
   margin-left: 150px;
   display: inline;
@@ -173,6 +201,7 @@ button:active {
   box-shadow: 0px 10px 47px -6px rgba(0, 0, 0, 0.75);
 }
 
+/* Styles for an element with class "addButton" */
 .addButton {
   height: 3em;
   margin: 20px auto;
@@ -182,6 +211,7 @@ button:active {
   box-shadow: 0px 10px 47px -6px rgba(0, 0, 0, 0.25);
 }
 
+/* Styles for a triangle element */
 .triangle {
   margin: -5px 338px;
   background: inherit;
@@ -191,6 +221,7 @@ button:active {
   z-index: 29;
 }
 
+/* Styles for a pop-up element */
 .popUp {
   text-align: center;
   margin: 80px 380px;
@@ -203,6 +234,7 @@ button:active {
   display: none;
 }
 
+/* Styles for input elements */
 input {
   margin-top: 20px;
   width: 70%;
@@ -214,18 +246,22 @@ input {
   text-align: center;
 }
 
+/* Styles for input elements with class "nameInput" */
 .nameInput {
   border-bottom: 5px solid var(--fadedText);
 }
 
+/* Styles for elements with class "enterTime" */
 .enterTime {
   width: 15%;
 }
 
+/* Styles for elements with class "popUp" */
 .popUp {
   font-size: 20px;
 }
 
+/* Styles for an element with class "shake" */
 .shake {
   /*   border-bottom: 5px solid red; */
   animation-name: alertAnimation;
@@ -233,6 +269,7 @@ input {
   animation-iteration-count: 3;
 }
 
+/* Keyframes animation named "alertAnimation" */
 @keyframes alertAnimation {
   0% {}
 
@@ -245,61 +282,74 @@ input {
   }
 }
 
+/* Styles for input placeholders in elements with class "nameInput" */
 .nameInput::-webkit-input-placeholder {
   text-align: center;
   color: rgba(0, 0, 0, 0.2);
 }
 
+/* Styles for checkboxes of type "checkbox" */
 /* WEEKDAYS  */
 input[type="checkbox"] {
   margin: 0px 11px;
 }
 
+/* Styles for elements with class "checkBox" */
 .checkBox {
   display: inline-block;
 }
 
+/* Styles for elements within a "week" class */
 .week div {
   font-size: 15px;
   margin-top: 10px;
   text-align: center;
 }
 
+/* Styles for elements with class "timeBox" */
 /* TIME  */
 .timeBox {
   font-size: 15px;
 }
 
+/* Styles for elements with class "enterTime" */
 .enterTime {
   width: 48px;
 }
 
+/* Styles for elements with class "hour" */
 .hour {
   text-align: right;
 }
 
+/* Styles for input placeholders in elements with class "hour" */
 .hour::-webkit-input-placeholder {
   text-align: right;
 }
 
+/* Styles for elements with class "halfHour" */
 .halfHour {
   text-align: left;
 }
 
+/* Styles for input placeholders in elements with class "halfHour" */
 .halfHour::-webkit-input-placeholder {
   text-align: left;
 }
 
+/* Styles for elements with class "colorPick" */
 /* COLOR */
 .colorPick {
   width: 30px;
   height: 30px;
 }
 
+/* Styles for elements with class "colorContainer" */
 .colorContainer {
   margin-top: 20px;
 }
 
+/* Styles for elements with class "color" */
 .color {
   margin: 0px 2px;
   display: inline-block;
@@ -310,46 +360,57 @@ input[type="checkbox"] {
   transition: 300ms;
 }
 
+/* Styles for "color" elements on hover */
 .color:hover {
   transform: scale(1.4, 1.4);
   transition: 300ms;
   box-shadow: inset 0px 0px 0px 4px rgba(255, 255, 255, 0.25);
 }
 
+/* Styles for "color" elements when active */
 .color:active {
   transform: scale(1.2, 1.2);
 }
 
+/* Styles for elements with ID "colorRed" */
 #colorRed {
   background-color: var(--colorRed);
 }
 
+/* Styles for elements with ID "colorBlue" */
 #colorBlue {
   background-color: var(--colorBlue);
 }
 
+/* Styles for elements with ID "colorGreen" */
 #colorGreen {
   background-color: var(--colorGreen);
 }
 
+/* Styles for elements with ID "colorOrange" */
 #colorOrange {
   background-color: var(--colorOrange);
 }
 
+/* Styles for elements with ID "colorYellow" */
 #colorYellow {
   background-color: var(--colorYellow);
 }
 
+/* Styles for elements with ID "colorPurple" */
 #colorPurple {
   background-color: var(--colorPurple);
 }
 
+/* Styles for elements with ID "colorPink" */
 #colorPink {
   background-color: var(--colorPink);
 }
 
+/* Styles for elements with ID "colorCyan" */
 #colorCyan {
   background-color: var(--colorCyan);
 }
 
+/* Media query for print styles */
 @media print {}

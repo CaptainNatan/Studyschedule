@@ -1,8 +1,10 @@
 <html>
 
 <head>
+  <!--This part of the code includes the CSS file for styling -->
   <link rel="table.css" />
   <link ref="stylesheet" href="table.css" />
+  <!-- Include the jQuery library -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
@@ -11,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,700" rel="stylesheet">
+  <!-- Includes a custom CSS file for the schedule styling -->
   <link href="schedule.css" rel="stylesheet">
 </head>
 
@@ -41,7 +44,7 @@
         <input id="fromTimeHalf" class="fromTime enterTime halfHour" type="number" placeholder="0" min="0" max="30"
           step="30" value="0">
 
-
+        <!-- Input fields for class start and end times -->
         To: <input id="toTimeHour" class="toTime enterTime hour" type="number" placeholder="0" min="1" max="12">:
         <input id="toTimeHalf" class="toTime enterTime halfHour" type="number" placeholder="00" min="0" max="30"
           step="30" value="0">
@@ -49,6 +52,7 @@
       <!--  colors   -->
 
       <!--     <div class="colorSelect"> <input type="color" class="colorPick"> </div> -->
+      <!-- Color selection options -->
       <div class="colorContainer">
         <div class="color" id="colorRed"></div>
         <div class="color" id="colorBlue"></div>
@@ -60,11 +64,11 @@
         <div class="color" id="colorCyan"></div>
       </div>
 
+      <!-- Button to create a class -->
       <button class="addButton">Create Class!</button>
-
+      <!-- Button to add a new class -->
     </div>
-
-
+    <!-- Table for displaying the class schedule -->
     <div class="topHeader">
       <h1>Class Schedule</h1>
       <button class="addNew">
@@ -90,7 +94,7 @@
       <div class="myClass">
         <p class="title">Drag Me!<i class="fa fa-trash-o" aria-hidden="true"></i></p>
       </div>
-
+      <!-- Table for displaying class timings and days -->
 
       <table class="tableTimes">
 
@@ -365,11 +369,9 @@
 
     </div>
     <!-- end of schedule area   -->
-
-
   </div>
   <!--  end of container  -->
-
+  <!-- Include the JavaScript file for interactive functionality -->
   <script src="schedule.js"></script>
 </body>
 

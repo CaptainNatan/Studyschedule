@@ -2,99 +2,120 @@
 <html>
 
 <head>
+  <!-- Link to style.CSS -->
   <link rel="stylesheet" href="globals.css" />
   <link rel="stylesheet" href="styleguide.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font awesome.min.css">
 
+  <!-- Include jQuery library -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="homepage">
-    <div class="div">
-      <div class="overlap">
-        <div class="rectangle"></div>
-        <div class="text-wrapper">Contact</div>
-        <div class="text-wrapper-2">FAQ</div>
-        <div class="text-wrapper-2">FAQ</div>
-        <div class="text-wrapper-3">About</div>
-        <a href="https://studyschedule.benhur10.repl.co/schedule.html">
-          <div class="text-wrapper-4">Calendar</div>
-        </a>
-          <a href="https://studyschedule.benhur10.repl.co/login.html">
-            Login/Register
-          </a>
-        <img class="studystream-png" src="StudyStream.png" />
+  <div class="navigation">
+    <!-- Logo image -->
+    <img class="logo" src="StudyStream.png" />
+    <div class="nav-menu">
+      <div class="menu-links">
+        <!-- Navigation links -->
+        <a href="https://studyschedule.benhur10.repl.co/schedule.html">Calendar</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+        <a href="#">MRGS website</a>
       </div>
-      <div class="overlap-group">
-        <img class="placecholder" alt="main pic" src="MainIMG.png">
-        <p class="p">
-          “The key is not to prioritize what's on your schedule, but to schedule your priorities” - Stephen R.Covey
-        </p>
-        <div class="group"></div>
-        <a href="https://studyschedule.benhur10.repl.co/login.html">
-          <div class="text-wrapper-6">Get started</div>
-        </a>
-      </div>
-      <p class="text-wrapper-7">Welcome to Study Schedule Website!</p>
-      <div class="overlap-2">
-        <p class="text-wrapper-8">
-          Welcome to our Study Schedule website, where organization meets success! Discover effective study
-          techniques, create personalized schedules, and unlock your full academic potential. Start your journey
-          towards academic excellence today!
-        </p>
-        <div class="button">
-          <div class="lebih-lanjut-wrapper">
-            <a href="https://studyschedule.benhur10.repl.co/login.html">
-              <div class="lebih-lanjut">Start Now!</div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <img class="placeholder" alt="12321" src="image.png" />
-      <div class="overlap-3">
-        <img class="img" src="IMG.png">
-        <div class="overlap-4">
-          <div class="text-wrapper-9">Why Schedule your study?</div>
-          <p class="text-wrapper-10">
-            Scheduling your study is crucial for effective time management, maintaining focus, and maximizing
-            productivity. It helps you prioritize tasks, stay organized, and ensures a balanced approach to learning,
-            leading to better retention of information and academic success
-          </p>
-        </div>
-      </div>
-      <img class="placeholder-2" alt="damn" src="Image2.png" />
-      <p class="text-wrapper-11">The benefit of scheduling your study!</p>
-      <p class="text-wrapper-12">
-        The key benefits of scheduling your study 📅📚 include increased productivity ⚡️, better time management ⏰,
-        improved focus 🔍, and enhanced retention 🧠. Take control of your learning journey and unlock your full
-        potential! 💪🌟
-      </p>
-      <div class="overlap-5">
-        <img class="studystream-png-2" src="StudyStream.png" />
-        <div class="text-wrapper-13">19322@students.mrgs.school.nz</div>
-        <div class="text-wrapper-14">Auckland, Mount Roskill someplace</div>
-        <div class="text-wrapper-15">Contact us</div>
-        <div class="text-wrapper-16">+10800-44-44-44</div>
-        <div class="text-wrapper-17">Helpful Websites
-          Rowel Website
-          Bliss Website
-          Arav Website</div>
-        <div class="overlap-6">
-          <p class="about"><span class="span">About</span> <span class="text-wrapper-18">&nbsp;</span></p>
-          <div class="text-wrapper-19">Calendar</div>
-        </div>
-        <div class="text-wrapper-20">Contact</div>
-        <div class="text-wrapper-21">FAQ</div>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-      </div>
+      <!-- Login/Register button -->
+      <a class="login-button rectangle-button"
+        href="https://studyschedule.benhur10.repl.co/login.html">Login/Register</a>
+      <span class="greeting"></span>
     </div>
   </div>
+
+  <div class="two-column-container">
+    <div class="image-container">
+      <!-- Image for the website -->
+      <img src="guy_writing.png" />
+    </div>
+    <div class="text-container">
+      <h2>Welcome to Study Schedule Website!</h2>
+      <p>Welcome to our Study Schedule website, where organization meets success! Discover effective study techniques,
+        create personalized schedules, and unlock your full academic potential. Start your journey towards academic
+        excellence </p>
+      <!-- Start now button -->
+      <button class="blue-button">Start now</button>
+    </div>
+  </div>
+  <div class="second-column-container">
+    <div class="image-container2">
+      <!-- Another image  -->
+      <img src="library-kid.png" />
+    </div>
+    <div class="text-container">
+      <h2>Why Schedule your study?</h2>
+      <p>Scheduling your study is crucial for effective time management, maintaining focus, and maximizing productivity.
+        It helps you prioritize tasks, stay organized, and ensures a balanced approach to learning, leading to better
+        retention of information and academic success </p>
+    </div>
+  </div>
+  <div class=third-column-container>
+    <div class="image-container3">
+      <!-- Third image on the left side -->
+      <img src="classroom.png" />
+    </div>
+    <div class="text-container">
+      <h2>The benefit of scheduling your study!</h2>
+      <p>The key benefits of scheduling your study 📅📚 include increased productivity ⚡️, better time management ⏰,
+        improved focus 🔍, and enhanced retention 🧠. Take control of your learning journey and unlock your full
+        potential! 💪🌟 </p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Pages</h3>
+        <ul>
+          <!-- Footer navigation links -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html">Study Schedule</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Helpful Websites</h3>
+        <ul>
+          <!-- Links to external websites -->
+          <li><a href="https://www.example1.com" target="_blank">Example Website 1</a></li>
+          <li><a href="https://www.example2.com" target="_blank">Example Website 2</a></li>
+          <li><a href="https://www.example3.com" target="_blank">Example Website 3</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>If you have any questions or feedback, please feel free to reach out to us:</p>
+        <!-- Link to a contact form -->
+        <a href="contact.html">Contact Form</a>
+      </div>
+    </div>
+    <!-- Copyright notice -->
+    <p>&copy; 2023 Study Scheduler</p>
+  </footer>
+
   <script src="users_data.js"></script>
   <script src="api.js"></script>
+  <script>
+    // If user is already logged in, redirect to homepage
+    if (sessionStorage.getItem('userStatus') == 'loggedIn') {
+      $(".login-button").hide();
+      $(".greeting").html("Welcome back, " + sessionStorage.getItem('username' + "!"));
+      console.log("Logged in")
+    } else {
+      console.log('Not redirecting...');
+
+    }
+  </script>
 </body>
 
 </html>
