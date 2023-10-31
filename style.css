@@ -8,6 +8,12 @@ img {
   height: 100%;
 }
 
+img.logo {
+  height: 250px;
+  width: 150px;
+  object-fit: contain;
+}
+
 /* Style the navigation bar, making it a flex container with space-between alignment */
 .navigation {
   display: flex;
@@ -34,6 +40,11 @@ img {
   text-decoration: none;
   color: #545454;
   padding: 0 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(1.2);
 }
 
 /* Style a button with a rectangular appearance */
@@ -98,6 +109,7 @@ img {
   background-color: #0193dc;
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 /* Style the footer with background color, text color, and text alignment */

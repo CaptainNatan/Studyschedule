@@ -25,7 +25,7 @@ async function check_login() {
 
         location.href = "/index.html"
         // Task: What should happen once the user has logged in? Do they go to a dashboard?
-        throw new Error("Break the loop.")
+        throw new Error("Shush")
       } else {
         alert("Invalid username/password")
       }

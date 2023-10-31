@@ -3,10 +3,9 @@
 
 <head>
   <!-- Link to style.CSS -->
-  <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="styleguide.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 
   <!-- Include jQuery library -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -20,10 +19,8 @@
     <div class="nav-menu">
       <div class="menu-links">
         <!-- Navigation links -->
-        <a href="https://studyschedule.benhur10.repl.co/schedule.html">Calendar</a>
-        <a href="#">About</a>
-        <a href="https://studyschedule.benhur10.repl.co/404-page.html">Contact</a>
-        <a href="https://studyschedule.benhur10.repl.co/404-page.html">FAQ</a>
+        <a href="About.html">About </a>
+        <a href=" https://studyschedule.benhur10.repl.co/schedule.html"> Calendar</a>
       </div>
       <!-- Login/Register button -->
       <a class="login-button rectangle-button"
@@ -43,11 +40,13 @@
         create personalized schedules, and unlock your full academic potential. Start your journey towards academic
         excellence </p>
       <!-- Start now button -->
-      <button class="blue-button">Start now</button>
+      <a href="About.html">
+        <button class="blue-button">Learn more</button>
+      </a>
     </div>
   </div>
   <div class="second-column-container">
-    <div class="image-container2">
+    <div class="image-container">
       <!-- Another image  -->
       <img src="library-kid.png" />
     </div>
@@ -59,7 +58,7 @@
     </div>
   </div>
   <div class=third-column-container>
-    <div class="image-container3">
+    <div class="image-container">
       <!-- Third image on the left side -->
       <img src="classroom.png" />
     </div>
@@ -78,24 +77,24 @@
           <!-- Footer navigation links -->
           <li><a href="index.html">Home</a></li>
           <li><a href="schedule.html">Study Schedule</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="About.html">About Us</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Helpful Websites</h3>
         <ul>
           <!-- Links to external websites -->
-          <li><a href="https://www.example1.com" target="_blank">Example Website 1</a></li>
-          <li><a href="https://www.example2.com" target="_blank">Example Website 2</a></li>
+          <li><a href="https://website-13csc.blissbizoza.repl.co/" target="_blank">CourseMa</a></li>
+          <li><a href="https://sportselector-webiste.aravkapoor.repl.co/" target="_blank">Sportselector</a></li>
           <li><a href="https://www.example3.com" target="_blank">Example Website 3</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Contact Us</h3>
-        <p>If you have any questions or feedback, please feel free to reach out to us:</p>
-        <!-- Link to a contact form -->
-        <a href="contact.html">Contact Form</a>
+        <p>If you have any questions or feedback, please feel free to reach out to us:
+        </p>
+        <p>19322@students.mrgs.school.nz</p>
+        <p>+6435688347</p>
       </div>
     </div>
     <!-- Copyright notice -->
@@ -108,7 +107,7 @@
     // If user is already logged in, redirect to homepage
     if (sessionStorage.getItem('userStatus') == 'loggedIn') {
       $(".login-button").hide();
-      $(".greeting").html("Welcome back, " + sessionStorage.getItem('username' + "!"));
+      $(".greeting").html("Welcome," + sessionStorage.getItem('username') + "");
       console.log("Logged in")
     } else {
       console.log('Not redirecting...');

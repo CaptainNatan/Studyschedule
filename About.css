@@ -1,68 +1,167 @@
-/* Reset default browser styles */
-body,
-h1,
-h2,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
+/* Set the font family for the entire page to 'Open Sans' */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
+  font-family: 'Open Sans', sans-serif;
 }
 
-header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+/* Ensure images fill their parent container vertically */
+img {
+  height: 100%;
 }
 
-header h1 {
-  font-size: 36px;
+img.logo {
+  height: 250px;
+  width: 150px;
+  object-fit: contain;
 }
 
-nav ul {
-  list-style: none;
+/* Style the navigation bar, making it a flex container with space-between alignment */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
 }
 
-nav ul li {
-  display: inline;
+/* Style the navigation menu within the navigation bar */
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the menu links within the navigation menu */
+.menu-links {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 
-nav a {
+/* Style the anchor tags within the menu links */
+.menu-links a {
   text-decoration: none;
-  color: #fff;
-  font-weight: bold;
+  color: #545454;
+  padding: 0 10px;
 }
 
-.about-us,
-.why-choose-us,
-.meet-the-team {
-  background-color: #fff;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 5px;
+.image {
+  width: 1440px;
+  height: 670px;
 }
 
-.team-member {
-  display: inline-block;
-  text-align: center;
-  margin: 20px;
+.about-image .img {
+  position: fixed;
+  width: 1440px;
+  height: 670px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
-.team-member img {
-  width: 150px;
-  border-radius: 50%;
+
+/* Style a two-column container with specific height and alignment properties */
+.two-column-container {
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
+/* Style a container for text content with a maximum width */
+.text-container {
+  max-width: 585px;
+}
+
+/* Style an image container with a specific height */
+.image-container {
+  height: 420px;
+}
+
+
+
+/* Style another image container with a specific height */
+.image-container2 {
+  height: 397px;
+}
+
+/* Style a container for the second column content with specific height and alignment properties */
+.second-column-container {
+  height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Style a container for the third column content with specific height and alignment properties */
+.third-column-container {
+  height: 596px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+/* Style an image container with specific width and height */
+.image-container3 {
+  width: 596px;
+  height: 371px;
+}
+
+/* Style a blue button with specific dimensions, colors, and border properties */
+.blue-button {
+  width: 184px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #0193dc;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the footer with background color, text color, and text alignment */
 footer {
   background-color: #007bff;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
+}
+
+/* Style the container for footer content, arranging it with space-around alignment */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Style individual sections within the footer with margin and text alignment */
+.footer-section {
+  margin: 0 20px;
+  text-align: left;
+}
+
+/* Style the heading within footer sections with a specific font size */
+.footer-section h3 {
+  font-size: 18px;
+}
+
+/* Style the unordered list within footer sections with no list-style and padding */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style list items within footer sections with margin */
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+/* Style anchor tags within footer sections, with color transition on hover */
+.footer-section a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: color 0.3s;
+}
+
+/* Change link color to yellow on hover */
+.footer-section a:hover {
+  color: #ffdb58;
+  /* Yellow color on hover */
 }
