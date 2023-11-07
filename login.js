@@ -23,7 +23,7 @@ async function check_login() {
         sessionStorage.setItem('userStatus', 'loggedIn')
         sessionStorage.setItem('username', account.username)
 
-        location.href = "/index.html"
+        location.href = "/schedule.html"
         // Task: What should happen once the user has logged in? Do they go to a dashboard?
         throw new Error("Shush")
       } else {
