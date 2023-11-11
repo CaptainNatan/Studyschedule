@@ -26,6 +26,7 @@ button {
   border-radius: 5px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 310px;
 }
 
 .login-form h2 {
@@ -40,7 +41,7 @@ button {
 }
 
 .login-form input {
-  width: 100%;
+  width: 69%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;

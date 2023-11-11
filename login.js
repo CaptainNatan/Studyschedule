@@ -21,11 +21,10 @@ async function check_login() {
         // Set the session to logged in
         console.log("Setting session to logged in")
         sessionStorage.setItem('userStatus', 'loggedIn')
-        sessionStorage.setItem('username', account.username)
 
-        location.href = "/schedule.html"
+        location.href = "/index.html"
         // Task: What should happen once the user has logged in? Do they go to a dashboard?
-        throw new Error("Shush")
+        throw new Error("Break the loop.")
       } else {
         alert("Invalid username/password")
       }

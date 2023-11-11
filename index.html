@@ -109,7 +109,7 @@
     // If user is already logged in, redirect to homepage
     if (sessionStorage.getItem('userStatus') == 'loggedIn') {
       $(".login-button").hide();
-      $(".greeting").html("Welcome," + sessionStorage.getItem('username') + "");
+      $(".greeting").html("Welcome," + sessionStorage.getItem('username'));
       console.log("Logged in")
     } else {
       console.log('Not redirecting...');
