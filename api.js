@@ -17,6 +17,7 @@ async function initialise_data() {
   if (has_dummy_data) {
     for (var item of data_setup) {
       console.log(item)
+      // Send a POST request to the API with the current item
       await fetch(api_url, {
         method: "POST",
         body: JSON.stringify(item),

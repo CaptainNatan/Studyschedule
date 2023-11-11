@@ -2,49 +2,63 @@
 <html lang="en">
 
 <head>
+  <!-- Metadata for character set and viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link to external style sheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Link to JavaScript file for login functionality -->
   <script src="login.js"></script>
+
+  <!-- Title of the page -->
   <title>Study Schedule Login</title>
+
+  <!-- Include jQuery library -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
 </head>
 
 <body>
 
+  <!-- Navigation section -->
   <div class="navigation">
     <!-- Logo image -->
     <img class="logo" src="StudyStream2.png" />
+
+    <!-- Navigation menu -->
     <div class="nav-menu">
       <div class="menu-links">
         <!-- Navigation links -->
         <a href="index.html">Home</a>
-        <a href="About.html">About </a>
+        <a href="About.html">About</a>
         <a href="mailto:193220@students.mrgs.school.nz">Contact developer</a>
       </div>
     </div>
   </div>
 
-
-  <!-- **************************** -->
+  <!-- Login container -->
   <div class="login-container">
     <div class="form-container">
       <h2>Login</h2>
-      <label for="UserText">Username</label>
+      <!-- Username input field -->
+      <label for="username">Username</label>
       <input type="text" id="UserText" name="username" required>
 
-      <label for="PasswordText">Password</label>
+      <!-- Password input field -->
+      <label for="password">Password</label>
       <input type="password" id="PasswordText" name="password" required>
 
+      <!-- Login button -->
       <button type="submit" onclick="check_login()">Login</button>
     </div>
   </div>
-  <!-- **************************** -->
 
-
+  <!-- Footer section -->
   <footer>
     <div class="footer-container">
+      <!-- Pages section -->
       <div class="footer-section">
         <h3>Pages</h3>
         <ul>
@@ -55,8 +69,10 @@
           <a href="mailto:193220@students.mrgs.school.nz">Contact developer</a>
         </ul>
       </div>
+
+      <!-- Recommended Websites section -->
       <div class="footer-section">
-        <h3>Helpful Websites</h3>
+        <h3> Recommended Websites</h3>
         <ul>
           <!-- Links to external websites -->
           <li><a href="https://website-13csc.blissbizoza.repl.co/" target="_blank">CourseMate</a></li>
@@ -64,13 +80,15 @@
           <li><a href="https://exam-helper.mrowel.repl.co/" target="_blank">Exam Helper</a></li>
         </ul>
       </div>
+
+      <!-- Contact Us section -->
       <div class="footer-section">
         <h3>Contact Us</h3>
-        <p>If you have any questions or feedback, please feel free to reach out to us:
-        </p>
+        <p>If you have any questions or feedback, please feel free to reach out to us:</p>
         <p>19322@students.mrgs.school.nz</p>
       </div>
     </div>
+
     <!-- Copyright notice -->
     <p>&copy; 2023 Study Scheduler</p>
   </footer>
@@ -78,3 +96,4 @@
 </body>
 
 </html>
+<!---end of html-->

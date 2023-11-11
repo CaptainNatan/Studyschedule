@@ -1,3 +1,4 @@
+// Sample data for user setup
 var data_setup = [
   {
     "email": "arav.kapoor@ameblo.jp",
@@ -17,4 +18,4 @@ var data_setup = [
     "username": "bliss_bizoza",
     "full_name": "Bliss Bizoza"
   }
-]
+];

@@ -8,6 +8,7 @@ img {
   height: 100%;
 }
 
+/* Style for the logo image */
 img.logo {
   height: 250px;
   width: 150px;
@@ -38,10 +39,12 @@ img.logo {
 /* Style the anchor tags within the menu links */
 .menu-links a {
   text-decoration: none;
-  color: #545454;
+  color: #000000;
   padding: 0 10px;
+  font-weight: bold;
 }
 
+/* Hover effect for anchor tags */
 a:hover {
   text-decoration: underline;
   transform: scale(1.2);
@@ -92,7 +95,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
 /* Style an image container with specific width and height */
@@ -162,12 +164,13 @@ footer {
   /* Yellow color on hover */
 }
 
+/* Image container with full height and width */
 .fill-image {
   height: 600px;
   width: 100vw;
-
 }
 
+/* Style images within the full-height and width container */
 .fill-image img {
   width: 100%;
   object-fit: cover;
@@ -178,7 +181,6 @@ footer {
 /*******************************/
 
 .about-content {
-
   margin: 3%;
 }
 
@@ -187,18 +189,21 @@ footer {
   margin-bottom: 10px;
 }
 
+/* Style text container within the about content */
 .text-container.about-content {
   margin: 20px 10% 0;
   max-width: 800px;
   text-align: left;
 }
 
+/* Style the about text container */
 .about-text-container {
   max-width: 585px;
   font-family: sans-serif;
   font-size: 18px;
 }
 
+/* Style a two-column container within the about page */
 .about-column-container {
   height: 596px;
   display: flex;
@@ -206,20 +211,13 @@ footer {
   justify-content: space-around;
 }
 
+/* Underline effect for text */
 .underline {
   text-decoration-line: underline;
   text-align: center;
 }
 
-
-
-/* LOGIN \
-button {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
-
+/* LOGIN PAGE */
 /* Center the login form */
 body,
 h2,
@@ -254,21 +252,21 @@ input {
   text-align: center;
   width: 300px;
 }
-
+/* Styles for the heading (h2) in the login container */
 .login-container h2 {
   margin-bottom: 20px;
   color: #ff0000;
   text-align: center;
 }
-
+/* Styles for labels in the login container */
 .login-container label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
   color: #555;
-  text-align: center
+  text-align: center;
 }
-
+/* Styles for input fields in the login container */
 .login-container input {
   width: 100%;
   padding: 10px;
@@ -276,7 +274,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
+/* Styles for buttons in the login container */
 .login-container button {
   background-color: #007bff;
   color: #ffffff;
@@ -287,7 +285,7 @@ input {
   transition: background-color 0.3s;
   margin: 15px 35%;
 }
-
+/* Styles for button hover state in the login container */
 .login-container button:hover {
   background-color: #0056b3;
 }

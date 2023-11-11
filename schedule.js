@@ -1,116 +1,92 @@
 /*
-
-- application doesnt handle negative inputs
-- to time alwasy > fromtime
-
+  - The application doesn't handle negative inputs.
+  - The end time is always expected to be greater than the start time.
 */
 
-//for existent elements in the page
+// For existing elements in the page
 updateElements();
 makeDeletable();
 
-
 /*
-ON CLICK EVENTS
+  ON CLICK EVENTS
 */
 
-//pop up menu to add class
+// Pop-up menu to add class
 $(".addNew").on("click", function() {
-
   $(".popUp").fadeToggle();
-
 });
 
-//clicking to add class
+// Clicking to add class
 $(".addButton").on("click", function() {
-
+  // Retrieve input values
   var title = $(".nameInput").val();
-
   var checkboxValue = [];
 
-  //retrives the values from selected checkboxes and pushes it into array
+  // Retrieve values from selected checkboxes and push them into an array
   $.each($("input:checked"), function() {
     checkboxValue.push($(this).val());
   });
 
   var fromTimeHour = $("#fromTimeHour").val();
   var fromTimeHalf = $("#fromTimeHalf").val();
-
   var toTimeHour = $("#toTimeHour").val();
   var toTimeHalf = $("#toTimeHalf").val();
 
   var color = $(this).css('backgroundColor');
-  // alert(color);
 
-  // alert(checkboxValue + " " + typeof checkboxValue[0] + " " + checkboxValue.length); //string 
+  // Validate inputs
 
-  //VALIDADE INPUTS
-
-  if (title != "") {
-    //create new div with class element and fadeout popup
-
-    //CREATE NEW ELEMENTS
+  if (title !== "") {
+    // Create new elements
     for (var i = 0; i < checkboxValue.length; i++) {
-
       createNew(title, fromTimeHour, fromTimeHalf, toTimeHour, toTimeHalf, Number(checkboxValue[i]), color);
-
     }
 
     makeDeletable();
-    updateElements()
+    updateElements();
     $(".nameInput").val("");
     $(".popUp").fadeToggle();
-
-
   } else {
-    //shake textbox
-    //toggle
+    // Shake textbox if title is empty
+    // Toggle
     shake();
-    //untoggles after animation is done
+    // Untoggle after the animation is done
     setTimeout(shake, 310);
   }
-
 });
 
-//clicking colors
+// Clicking colors
 $(".color").on("click", function() {
-
   let myColor = $(this).css('backgroundColor');
-
   $(".addButton").css('backgroundColor', myColor);
-
 });
 
+// Function to shake the input box
 function shake() {
   $(".nameInput").toggleClass("shake");
 }
 
+// Function to create a new element
 function createNew(title, fromTimeHour, fromTimeHalf, toTimeHour, toTimeHalf, weekDay, color) {
-
-
   var unit = 15;
-  //create new element using title+weekday as ID
+  // Create a new element using title + weekday as ID
   var newElement = '<div id=' + title + weekDay + ' class="myClass ui-draggable ui-draggable-handle ui-resizable"><p class="title">' + title + '<i class="fa fa-trash-o" aria-hidden="true"></i></p><div class="ui-resizable-handle ui-resizable-s" style="z-index:90;"></div></div>';
 
-  //inserts it
+  // Insert the new element
   $(newElement).insertBefore(".tableTimes");
 
-
-  //this is how we will control where the elements will appear on the grid
-  //left for the day of the week
-  //top for starting time
-  //height interval of time
+  // Set the position and style of the new element
   $("#" + title + weekDay).css({
     "left": weekDay,
     "top": getStartHour(fromTimeHour, fromTimeHalf),
     "height": getToHour(fromTimeHour, fromTimeHalf, toTimeHour, toTimeHalf),
     "background-color": "" + color,
-
   });
 
   updateElements();
 }
 
+// Function to make elements resizable
 function makeResizable() {
   $(".myClass").resizable({
     handles: 's',
@@ -118,40 +94,36 @@ function makeResizable() {
   });
 }
 
+// Function to make elements draggable
 function makeDraggable() {
   $(".myClass").draggable({
     containment: 'parent',
     grid: [100, 15]
   });
-  console.log("dragable");
+  console.log("draggable");
 }
 
-
-
+// Function to update elements
 function updateElements() {
   makeDraggable();
   makeResizable();
-
 }
 
+// Function to make elements deletable
 function makeDeletable() {
-
   $(".fa-trash-o").on("click", function() {
-
     $(this).parent().parent().remove();
-
-
   });
 }
 
 /*
-NOTE: need to make sure inputs are valid on functions bellow and test more
-- FROM needs to be smaller than TO
-- create function validate input
+  NOTE: Need to make sure inputs are valid on functions below and test more
+  - FROM needs to be smaller than TO
+  - Create a function to validate input
 */
 
+// Function to correct the hour
 function correctHour(toHour) {
-
   var result;
 
   if (toHour < 7) {
@@ -159,73 +131,51 @@ function correctHour(toHour) {
   } else {
     result = toHour;
   }
-  // alert(result);
   return result;
 }
 
+// Function to calculate the total hours
 function getToHour(fromHour, fromHalf, toHour, toHalf) {
-  //needs to handle 9am to 1pm types of entry
   var compensation;
 
   if (fromHalf == 30 && toHalf == 30) {
-
     compensation = 0;
-
   } else if (fromHalf == 30) {
-
     compensation = -15;
-
   } else if (toHalf == 30) {
-
     compensation = 15;
-
   } else {
-
     compensation = 0;
   }
 
   var correctedToHour = correctHour(toHour);
   var correctedFromHour = correctHour(fromHour);
-  // alert(correctedHour);
   return ((correctedToHour - correctedFromHour) * 30) + compensation;
-
 }
 
+// Function to get the starting hour
 function getStartHour(fromHour, fromHalf) {
-
-  let base = 110; //that gives 7am
+  let base = 110; // that gives 7am
   var unitHalf;
 
-  //this rounds down or up
   if (fromHalf >= 30) {
-
-    unitHalf = 15; //half an hour
-
+    unitHalf = 15; // half an hour
   } else {
-
     unitHalf = 0;
   }
 
-
   if (fromHour >= 7) {
-
     return base + ((fromHour - 7) * 30) + unitHalf;
-
   } else {
-    //260 is the base for anything after 12
+    // 260 is the base for anything after 12
     return 260 + (fromHour * 30) + unitHalf;
-
   }
-
-};
-
-function validateInput(number1, number2) {
-  //tittle cant be an empty string
-  //fromHour > toHour
-  //array of weekdays is not empty
-  //color with r,g or b lower than 130 makes color of text white
-
-
 }
 
-
+// Function to validate input
+function validateInput(number1, number2) {
+  // Title can't be an empty string
+  // FROM hour must be less than TO hour
+  // Array of weekdays is not empty
+  // Color with red, green, or blue lower than 130 makes the text color white
+}
