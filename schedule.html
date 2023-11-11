@@ -1,9 +1,6 @@
 <html>
 
 <head>
-  <!--This part of the code includes the CSS file for styling -->
-  <link rel="table.css" />
-  <link ref="stylesheet" href="table.css" />
   <!-- Include the jQuery library -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -14,7 +11,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,700" rel="stylesheet">
   <!-- Includes a custom CSS file for the schedule styling -->
-  <link href="schedule.css" rel="stylesheet">
+  <link rel="stylesheet" href="schedule.css">
+
 </head>
 
 <body>
@@ -74,6 +72,14 @@
       <button class="addNew">
         Add Class
       </button>
+
+      <a href="index.html">
+        <button class="exitButton">
+          Exit
+        </button>
+      </a>
+
+
 
       <table class="tableHeader">
         <tr>
@@ -370,6 +376,7 @@
     </div>
     <!-- end of schedule area   -->
   </div>
+
   <!--  end of container  -->
   <!-- Include the JavaScript file for interactive functionality -->
   <script src="schedule.js"></script>

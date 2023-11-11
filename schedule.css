@@ -193,7 +193,7 @@ button:active {
 
 /* Styles for an element with class "addNew" */
 .addNew {
-  margin-left: 150px;
+  margin-left: 40px;
   display: inline;
   position: absolute;
   font-size: 12px;
@@ -214,7 +214,7 @@ button:active {
 
 /* Styles for a triangle element */
 .triangle {
-  margin: -5px 338px;
+  margin: -5px 150px;
   background: inherit;
   height: 50px;
   width: 50px;
