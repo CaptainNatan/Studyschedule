@@ -1,6 +1,7 @@
 /* Set the font family for the entire page to 'Open Sans' */
 body {
   font-family: 'Open Sans', sans-serif;
+  
 }
 
 /* Ensure images fill their parent container vertically */
